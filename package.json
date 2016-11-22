@@ -6,7 +6,7 @@
   "keywords": [
     "Perl", "autocomplete", "completion"
   ],
-  "repository": "https://github.com/atom/autocomplete-perl",
+  "repository": "https://github.com/takuji31/atom-autocomplete-perl",
   "license": "MIT",
   "engines": {
     "atom": ">=1.0.0 <2.0.0"

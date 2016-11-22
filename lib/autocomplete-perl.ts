@@ -1,23 +1,30 @@
+/// <reference path="../typings/bundle.d.ts" />
+
+import {KeywordProvider} from "./keyword-provider";
+import {Provider} from "./provider";
+import {UseAndRequireCompletionProvider} from "./use-and-require-completion-provider";
+
 class AutocompletPerlProvider {
-  provider: AutocompletPerlProvider = null
+  providers: Provider[] = null
   activate() {
 
   }
   deactivate() {
-    this.provider = null
+    this.providers = null
   }
   provide() {
-    if (this.provider === null) {
+    console.log('debug')
+    if (this.providers === null) {
       //TODO initialize
-      this.provider = new AutocompletPerlProvider()
+      this.providers = [new KeywordProvider()];
     }
-    return this.provider
+    return this.providers
   }
 
   consumeSnippets(snippets)  {
-    if (this.provider !== null) {
-      // this.provider.setSnippetsSource(snippets)
+    if (this.providers !== null) {
+      // this.providers.setSnippetsSource(snippets)
     }
   }
 }
-export = AutocompletPerlProvider
+export = new AutocompletPerlProvider()
