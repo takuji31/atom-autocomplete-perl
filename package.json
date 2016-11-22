@@ -6,9 +6,6 @@
   "keywords": [
     "Perl", "autocomplete", "completion"
   ],
-  "activationCommands": {
-    "atom-workspace": "autocomplete-perl:toggle"
-  },
   "repository": "https://github.com/atom/autocomplete-perl",
   "license": "MIT",
   "engines": {
