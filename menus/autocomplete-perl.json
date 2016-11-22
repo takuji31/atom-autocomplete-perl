@@ -1,0 +1,26 @@
+{
+  "context-menu": {
+    "atom-text-editor": [
+      {
+        "label": "Toggle autocomplete-perl",
+        "command": "autocomplete-perl:toggle"
+      }
+    ]
+  },
+  "menu": [
+    {
+      "label": "Packages",
+      "submenu": [
+        {
+          "label": "autocomplete-perl",
+          "submenu": [
+            {
+              "label": "Toggle",
+              "command": "autocomplete-perl:toggle"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
