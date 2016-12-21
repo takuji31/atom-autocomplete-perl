@@ -3,7 +3,7 @@ import {ISuggestion} from './suggestion';
 
 interface SuggestionInfo {
   editor: AtomCore.IEditor;
-  bufferPosition: {row: number, column: number};
+  bufferPosition: TextBuffer.IPoint;
   scopeDescriptor: AtomCore.ScopeDescriptor;
   prefix: string;
   activatedManually: boolean;

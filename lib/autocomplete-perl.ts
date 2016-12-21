@@ -1,11 +1,12 @@
 /// <reference path="../typings/bundle.d.ts" />
 
-import {KeywordProvider} from "./keyword-provider";
+import {Config} from "./config";
 import {Provider} from "./provider";
 import {UseAndRequireCompletionProvider} from "./use-and-require-completion-provider";
 
 class AutocompletPerlProvider {
   providers: Provider[] = null
+  config =  Config.config
   activate() {
 
   }
@@ -16,7 +17,7 @@ class AutocompletPerlProvider {
     console.log('debug')
     if (this.providers === null) {
       //TODO initialize
-      this.providers = [new KeywordProvider()];
+      this.providers = [new UseAndRequireCompletionProvider()];
     }
     return this.providers
   }
