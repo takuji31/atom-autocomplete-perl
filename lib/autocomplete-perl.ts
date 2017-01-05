@@ -2,7 +2,7 @@
 
 import {Config} from "./config";
 import {Provider} from "./provider";
-import {UseAndRequireCompletionProvider} from "./use-and-require-completion-provider";
+import {PackageCompletionProvider} from "./package-completion-provider";
 
 class AutocompletPerlProvider {
   providers: Provider[] = null
@@ -17,7 +17,7 @@ class AutocompletPerlProvider {
     console.log('debug')
     if (this.providers === null) {
       //TODO initialize
-      this.providers = [new UseAndRequireCompletionProvider()];
+      this.providers = [new PackageCompletionProvider()];
     }
     return this.providers
   }
